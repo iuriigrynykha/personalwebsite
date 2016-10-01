@@ -3,112 +3,144 @@
     <head>
         <meta charset="utf-8">
         <title>Iurii Grynykha - Personal website</title>
+        <link rel="stylesheet" href="css/style.css" type="text/css">
     </head>
     <body>
-        <header>
-            <!--Header background image, which will be implemented by CSS-->
-            <img src="img/responsive-design.png" alt="Responsive design">
+        <header class="page-header">
             <!--Header section with header logotype and nav-menu-->
-            <section>
+            <section class="top-layout-positioner">
                 <div class="header-logo">
                     <h2>
                         IURII GRYNYKHA
-                    <br>
-                        <span>
-                            FRONT-END DEVELOPER
-                        </span>
                     </h2>
+                    <span>
+                        FRONT-END DEVELOPER
+                    </span>
                 </div>
-                <nav>
-                    <a href="#about-me">About me</a>
-                    <a href="#skills">Skills</a>
-                    <a href="#contacts">Contacts</a>
+                <nav class="header-nav-menu">
+                    <ul>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contacts">Contact me</a></li>
+                    </ul>
                 </nav>
             </section>
             <!--Infornation about website content-->
-            <section>
+            <section class="about-website-content">
                 <h1>
                     FRONT-END DEVELOPMENT
-                <br>
-                    <span>
-                        HTML5, CSS3, JavaScript
-                    </span>
                 </h1>
+                <span>
+                    HTML5, CSS3, JavaScript
+                </span>
             </section>
         </header>
         <main>
-            <section>
+            <section class="about-me">
                 <h2>ABOUT ME</h2>
-                <p>My name is Iurii. I am front-end developer who can create
-                websites with beautiful design, simple to use and user friendly
-                according to your requirements and deadlines. I develop websites
-                using HTML5, CSS3, JavaScript, the Bootstrap CSS framework!
-                If you want to know more about me you can download my CV to find
-                out more about my experience!</p>
+                <div class="layout-positioner">
+                    <figure>
+                        <img src="img/my-photo.jpg" alt="Iurii Grynykha">
+                    </figure>
+                    <section class="par-section">
+                        <p>My name is Iurii. I am 23 years old and I am front-end 
+                        developer. I develop websites using HTML5, CSS3, JavaScript
+                        and other techniques. I always improve my knowledge and 
+                        realy do my best to reach a good result for you. That is why
+                        I have passed online course "HTML5, CCS3, JavaScript" on
+                        <a href="https://htmlacademy.ru/">htmlacademy.ru</a> and now
+                        I am studying at SoftServe academy on the course
+                        "HTML5,CSS3,JavaScript Fundamentals" and I do not
+                        stop on this. Because I belive that in this field you must
+                        always improve your skills in practise and always learn new
+                        information in order to be the best developer.
+                        <br>
+                        I am self-driven, goal-oriented, hardworking person and
+                        ready to do everything for reaching my aim.
+                        <br>
+                        If you want to know more about me you can download my
+                        CV to find out more about my experience!</p>
+                        <form method="get" class="download-btn">
+                            <button name="submit">Download CV</button>
+                        </form>
+                    </section>
+                </div>
             </section>
-            <section>
+            <section class="skills">
                 <h2>SKILLS</h2>
-                <figure>
-                <img src="img/front-end-skills.png" alt="My developing skills">
-                </figure>
-                <p>I code responsive and cross browser websites using HTML5,
-                CSS3, JavaScript Bootstrap CSS frameworks, JQuery JavaScript
-                libraries.</p>
+                <div class="layout-positioner">
+                    <figure>
+                    <img src="img/front-end-skills.png" alt="My developing skills">
+                    </figure>
+                    <section class="par-section-skills">
+                        <p>I am front-end developer who can create websites with
+                        beautiful design, simple to use and user friendly, according
+                        to your requirements and deadlines. I code responsive and cross
+                        browser websites using HTML5, CSS3, JavaScript Bootstrap CSS
+                        frameworks, JQuery JavaScript libraries.</p>
+                    </section>
+                </div>
             </section>
-            <section>
-                <h2>CONTACTS</h2>
-                <figure>
-                <img src="img/contacts.jpg" alt="Contacts">
-                </figure>
-                <p>Lviv, Ukraine 
-                <br>
-                tel.: 093 888 88 88
-                <br>
-                email: email@sample.com
-                <br>
-                or fill in the form and I will answer you as soon as possible</p>
-                <!--Contact form-->
-                <form method="post" action="https://formspree.io/geroge.gru@gmail.com">
-                    <label for="user-name-field">Full name:</label>
-                    <br>
-                    <input type="text" name="user-name" id="user-name-field" 
-                    autocomplete="on" pattern="^[A-Za-zА-Яа-яЁёІі\s]+$" 
-                    placeholder="Enter your full name" required>
-                    <br>
-                    <label for="user-email-field">Email:</label>
-                    <br>
-                    <input type="email" name="user-email" id="user-email-field" 
-                    placeholder="Enter your email please" required>
-                    <br>
-                    <label for="comments-field">Comments:</label>
-                    <br>
-                    <textarea name="comments" id="comments-field" cols="50"
-                    rows="5"></textarea>
-                    <br>
-                    <button name="submit">Sent</button>
-                </form>
+            <section class="contact-me">
+                <h2>CONTACT ME</h2>
+                    <div class="layout-positioner">
+                    <figure>
+                    <img src="img/contacts.jpg" alt="Contacts">
+                    </figure>
+                    <section class="contacts">
+                        <p>
+                            <span class="contact-icons">Lviv, Ukraine</span>
+                        <br>
+                            <span class="contact-icons">tel: (093)-486-67-51</span>
+                        <br>
+                            <span class="contact-icons">email: email@sample.com</span>
+                        <br>
+                        or fill in the form and I will answer you as soon as possible</p>
+                        <!--Contact form-->
+                        <form method="post" action="https://formspree.io/geroge.gru@gmail.com"
+                        class="contact-form">
+                            <label for="user-name-field">Full name:<span>&#42;</span></label>
+                            <br>
+                            <input type="text" name="user-name" id="user-name-field" 
+                            autocomplete="on" pattern="^[A-Za-zА-Яа-яЁёІі\s]+$" 
+                            placeholder="Enter your full name" required>
+                            <br>
+                            <label for="user-email-field">Email:<span>&#42;</span></label>
+                            <br>
+                            <input type="email" name="user-email" id="user-email-field" 
+                            placeholder="Enter your email please" required>
+                            <br>
+                            <label for="comments-field">Comments:</label>
+                            <br>
+                            <textarea name="comments" id="comments-field" cols="50"
+                            rows="5"></textarea>
+                            <br>
+                            <button name="submit">Sent</button>
+                        </form>
+                        <p>Fields with <span>&#42;</span> is required to fill in!</p>
+                    </section>
+                </div>
             </section>
         </main>
-        <footer>
+        <footer class="page-footer">
             <!--Section with footer logotype and nav-menu-->
             <section>
-            <div>
+            <div class="footer-logo">
                 <h2>
                     IURII GRYNYKHA
-                <br>
+                </h2>
                 <span>
                     FRONT-END DEVELOPER
                 </span>
-                </h2>
             </div>
-            <nav>
+            <nav class="footer-nav-menu">
                 <a href="#about-me">About me</a>
                 <a href="#skills">Skills</a>
                 <a href="#contacts">Contacts</a>
             </nav>
             </section>
             <!--Section with social network links-->
-            <div>
+            <div class="socials">
                 <a href="#vk">VK</a>
                 <a href="#fb">Facebook</a>
                 <a href="#g-plus">Google+</a>
@@ -116,7 +148,7 @@
                 <a href="#git">GitHub</a>
             </div>
             <!--Copyright-->
-            <div>
+            <div class="copyright">
                 Iurii Grynykha &#169; 2016
             </div>
         </footer>

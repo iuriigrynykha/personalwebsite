@@ -1,0 +1,279 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background-color: #ffffff;
+}
+
+body {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.page-header {
+    width: 100%;
+    height: 100%;
+    background: url("../img/responsive-design.png") no-repeat;
+    background-size: 100% 115%;
+}
+
+    .top-layout-positioner {
+        width: 100%;
+        margin: auto;
+        border-bottom: 0.1rem solid #cdcdcd;
+    }
+    
+    .header-logo {
+        display: inline-block;
+        width: 30%;
+        min-width: 200px;
+        padding: 1% 0 1% 0;
+        text-align: center;
+        vertical-align: middle;
+    }
+        
+        .header-logo h2 {
+            margin: 0;
+            padding: 0;
+            font-size: 2em;
+        }
+    
+    .header-nav-menu {
+        display: inline-block;
+        width: 40%;
+        margin: 0;
+        padding: 0;
+        margin-left: 25%;
+    }
+    
+        .header-nav-menu ul {
+            display: flex;
+            justify-content: space-around;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .header-nav-menu ul li a {
+            font-size: 1.2em;
+            color: #000000;
+            text-decoration: none;
+        }
+        
+        .header-nav-menu ul li a:hover {
+            border-bottom: 0.1rem solid #363636;
+        }
+        
+    .about-website-content {
+        position: absolute;
+        width: 70%;
+        bottom: 0%;
+        color: #ffffff;
+        left: 50%;
+        transform: translate(-50%);
+        text-align: center;
+        background-image: linear-gradient(90deg, transparent 10%, #000000 25%, #000000 75%, transparent 90%);
+    }
+    
+        .about-website-content h1 {
+            font-size: 3rem;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .about-website-content span {
+            font-size: 2rem;
+        }
+
+main {
+    width: 100%;
+}
+
+    .about-me,
+    .skills,
+    .contact-me {
+        width: 100%;
+        height: 100vh;
+        margin: 0;
+        padding: 0;
+        background: url("../img/responsive-bglayouts.png") no-repeat 100% 100%;
+        border-bottom: 0.1rem solid #cdcdcd;
+    }
+    
+    .about-me h2,
+    .skills h2,
+    .contact-me h2 {
+        width: 100%;
+        font-size: 48px;
+        margin: 0;
+        border-bottom: 0.1rem solid #cdcdcd;
+        text-align: center;
+        padding: 1% 0 1% 0;
+    }
+    
+    .about-me .layout-positioner,
+    .skills .layout-positioner,
+    .contact-me .layout-positioner {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        height: 90%;
+    }
+    
+    .about-me figure {
+        width: 50%;
+        min-width: 300px;
+    }
+    
+        .about-me figure img {
+            width: 100%;
+        }
+        
+    .par-section {
+        width: 40%;
+    }
+    
+    .par-section p {
+        min-width: 350px;
+        max-height: 50%;
+        margin: 0 0 2% 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding: 2%;
+        border: 0.2rem solid #B3B3B3;
+        border-radius: 10px;
+        background-color: rgba(227, 227, 227, 0.80);
+    }
+    
+    .about-me .layout-positioner p a,
+    .about-me .layout-positioner p a:visited {
+        text-decoration: none;
+        color: #363636;
+        border-bottom: 1px dashed #363636;
+    }
+    
+    .about-me .download-btn button {
+        padding: 3%;
+        margin-left: 50%;
+        transform: translate(-50%);
+        border-radius: 10px;
+        border-style: none;
+        background-image: linear-gradient(180deg, #cdcdcd 10%, #fff 30%, #fff 70%, #cdcdcd 90%);
+        box-shadow: 0 1px 0 2px #cdcdcd;
+    }
+    
+    .about-me .download-btn button:hover {
+        background-image: linear-gradient(180deg, #5E5E5E 10%, #fff 30%, #fff 70%, #5E5E5E 90%);
+    }
+    
+.skills {
+    background: none;
+}
+
+    .skills .layout-positioner {
+        height: 50%;
+        background-color: rgba(204, 204, 204, 0.2);
+        flex-direction: row-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    
+    .skills .par-section-skills {
+        width: 50%;
+    }
+    
+    .skills .par-section-skills p {
+        min-width: 350px;
+        max-height: 50%;
+        margin: 0 0 2% 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+        padding: 2%;
+    }
+    
+.contact-me {
+    height: 80vh;
+    background: none;
+}
+
+    .contact-me .layout-positioner {
+    }
+    
+    .contact-me figure {
+        width: 30%;
+    }
+    
+    .contact-me figure img {
+        width: 100%;     
+    }
+    
+    .contact-me .contacts {
+          width: 30%;
+    } 
+    
+    .contact-me .contacts p {
+         min-width: 350px;
+        max-height: 50%;
+        margin: 0 0 2% 0;
+        font-size: 1.1rem;
+        line-height: 1.5;
+    }
+   
+  /*  .contact-me .contacts p .contact-icons {
+        display: inline-block;
+        position: relative;
+        margin-bottom: 3%;
+    }
+    
+    .contact-me .contacts p .contact-icons::before {
+        content: "";
+        position: absolute;
+        height: 40px;
+        width: 40px;
+        left: -50px;
+        margin-bottom: 1%;
+        border: 1px solid black;
+        background: url("../img/sprite-icons.png") no-repeat;
+        background-size: 200px 150px;
+    }
+    
+    .contact-me .contacts p .contact-icons:first-child::before {
+        background-position: 20% 15%; 
+    }*/
+    
+    .contact-me .contacts label span,
+    .contact-me .contacts p:last-child span{
+        color: #f00;
+    }
+    
+    .contacts input,
+    .contacts input:valid,
+    .contacts textarea {
+        color: #000;
+        width: 70%;
+        padding: 5px 5px;
+        margin-bottom: 5px;
+    }
+    
+    .contacts input:invalid {
+        color: #e74c3c;
+    }
+    
+    .contacts button {
+        padding: 2px 20px;
+    }
+
+
+.page-footer {
+    height: 20vh;
+}
