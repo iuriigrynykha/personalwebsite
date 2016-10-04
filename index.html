@@ -3,7 +3,12 @@
     <head>
         <meta charset="utf-8">
         <title>Iurii Grynykha - Personal website</title>
+        <meta name="viewport" content="width=device-width, height=device-height, 
+        initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/index-responce.css" 
+        media="(max-width: 768px)" type="text/css">
+        <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
     </head>
     <body>
         <header class="page-header">
@@ -21,7 +26,7 @@
                     <ul>
                         <li><a href="#about-me">About me</a></li>
                         <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contacts">Contact me</a></li>
+                        <li><a href="#contact-me">Contact me</a></li>
                     </ul>
                 </nav>
             </section>
@@ -36,7 +41,7 @@
             </section>
         </header>
         <main>
-            <section class="about-me">
+            <section class="about-me" id="about-me">
                 <h2>ABOUT ME</h2>
                 <div class="layout-positioner">
                     <figure>
@@ -49,11 +54,11 @@
                         realy do my best to reach a good result for you. That is why
                         I have passed online course "HTML5, CCS3, JavaScript" on
                         <a href="https://htmlacademy.ru/">htmlacademy.ru</a> and now
-                        I am studying at SoftServe academy on the course
-                        "HTML5,CSS3,JavaScript Fundamentals" and I do not
-                        stop on this. Because I belive that in this field you must
-                        always improve your skills in practise and always learn new
-                        information in order to be the best developer.
+                        I am studying at SoftServe academy on the course "HTML5,CSS3,
+                        JavaScript Fundamentals" and I do not stop on this. Because
+                        I belive that in this field you must always improve your
+                        skills in practise and always learn new information in
+                        order to be the best developer.
                         <br>
                         I am self-driven, goal-oriented, hardworking person and
                         ready to do everything for reaching my aim.
@@ -66,7 +71,7 @@
                     </div>
                 </div>
             </section>
-            <section class="skills">
+            <section class="skills" id="skills">
                 <h2>SKILLS</h2>
                 <div class="layout-positioner">
                     <figure>
@@ -80,22 +85,40 @@
                         frameworks, JQuery JavaScript libraries.</p>
                     </div>
                 </div>
+                <section class="portfolio">
+                    <h2>Portfolio</h2>
+                    <div class="layout-positioner">
+                        <figure>
+                            <img src="img/portfolio-project1.jpg">
+                        </figure>
+                        <figure>
+                            <img src="img/portfolio-project2.jpg">
+                        </figure>
+                    </div>
+                </section>
             </section>
-            <section class="contact-me">
+            <section class="contact-me" id="contact-me">
                 <h2>CONTACT ME</h2>
                     <div class="layout-positioner">
                     <figure>
                     <img src="img/contacts.jpg" alt="Contacts">
                     </figure>
                     <div class="contacts">
-                        <p>
-                            <span class="contact-icons">Lviv, Ukraine</span>
-                        <br>
-                            <span class="contact-icons">tel: (093)-486-67-51</span>
-                        <br>
-                            <span class="contact-icons">email: email@sample.com</span>
-                        <br>
-                        or fill in the form and I will answer you as soon as possible</p>
+                        <table>
+                            <tr>
+                                <td><i class="fa fa-location-arrow" aria-hidden="true"></i></td>
+                                <td>Address: Lviv, Ukraine</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-mobile" aria-hidden="true"></i></td>
+                                <td>Tel: (093)-486-67-51</td>
+                            </tr>
+                            <tr>
+                                <td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
+                                <td>Email: iurii.grynykha@gmail.com</td>
+                            </tr>
+                        </table>
+                        <p>You can fill in the form and I will answer you as soon as possible.</p>
                         <!--Contact form-->
                         <form method="post" action="https://formspree.io/geroge.gru@gmail.com"
                         class="contact-form">
@@ -104,11 +127,13 @@
                             <input type="text" name="user-name" id="user-name-field" 
                             autocomplete="on" pattern="^[A-Za-zА-Яа-яЁёІі\s]+$" 
                             placeholder="Enter your full name" required>
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
                             <br>
                             <label for="user-email-field">Email:<span>&#42;</span></label>
                             <br>
                             <input type="email" name="user-email" id="user-email-field" 
                             placeholder="Enter your email please" required>
+                            <i class="fa fa-check-square-o" aria-hidden="true"></i>
                             <br>
                             <label for="comments-field">Comments:</label>
                             <br>
@@ -124,28 +149,38 @@
         </main>
         <footer class="page-footer">
             <!--Section with footer logotype and nav-menu-->
-            <section>
-            <div class="footer-logo">
-                <h2>
-                    IURII GRYNYKHA
-                </h2>
-                <span>
-                    FRONT-END DEVELOPER
-                </span>
-            </div>
-            <nav class="footer-nav-menu">
-                <a href="#about-me">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#contacts">Contacts</a>
-            </nav>
-            </section>
-            <!--Section with social network links-->
-            <div class="socials">
-                <a href="#vk">VK</a>
-                <a href="#fb">Facebook</a>
-                <a href="#g-plus">Google+</a>
-                <a href="#li">LinkediIn</a>
-                <a href="#git">GitHub</a>
+            <div class="layout-positioner">
+                <div class="footer-logo">
+                    <h2>
+                        IURII GRYNYKHA
+                    </h2>
+                    <span>
+                        FRONT-END DEVELOPER
+                    </span>
+                </div>
+                <nav class="footer-nav-menu">
+                    <ul>
+                        <li><a href="#about-me">About me</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact-me">Contacts</a></li>
+                    </ul>
+                </nav>
+                <!--Section with social network links-->
+                <div class="socials">
+                    <a href="https://vk.com/iuriigrynykha" class="icon icon-vk" target="_blank">
+                        <i class="fa fa-vk" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://www.facebook.com/profile.php?id=100007631357282"
+                    class="icon icon-fb" target="_blank">
+                        <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://ua.linkedin.com/in/iurii-grynykha-5b4b2411a" class="icon icon-in" target="_blank">
+                        <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+                    </a>
+                    <a href="https://github.com/iuriigrynykha" class="icon icon-gh" target="_blank">
+                        <i class="fa fa-github-alt" aria-hidden="true"></i>
+                    </a>
+                </div>
             </div>
             <!--Copyright-->
             <div class="copyright">

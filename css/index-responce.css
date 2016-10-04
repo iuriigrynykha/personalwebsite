@@ -1,0 +1,118 @@
+.page-header {
+    height: 50%;
+}
+
+    .header-logo {
+        width: 60%;
+    }
+
+        .header-logo h2 {
+            font-size: 1.5em;
+        }
+    .header-nav-menu {
+        display: none;
+    }
+    
+    .about-website-content {
+        width: 90%;
+    }
+    
+    .about-website-content h1 {
+        font-size: 1.5em;
+    }
+    
+    .about-website-content span {
+        font-size: 1rem;
+    }
+    
+.about-me {
+    background-size: 100%;
+}
+
+.about-me h2,
+.skills h2,
+.contact-me h2 {
+    font-size: 32px;
+}
+
+.about-me .layout-positioner,
+.skills .layout-positioner,
+.contact-me .layout-positioner {
+     flex-direction: column;
+}
+
+.about-me figure {
+    width: 70%;
+    min-width: 150px;
+}
+
+.par-section {
+    width: 80%;
+    margin: 2% 0 2% 0;
+}
+.par-section p {
+    margin: 0;
+    font-size: 1rem;
+    min-width: 120px;
+    margin-bottom: 2%;
+}
+
+.skills .layout-positioner {
+    margin: 2% 0 2% 0;
+}
+
+.skills .par-section-skills {
+    width: 90%;
+}
+
+.skills .par-section-skills p {
+    min-width: 150px;
+}
+
+ .portfolio .layout-positioner figure {
+    position: relative;
+    width: 70%;
+}
+
+.portfolio .layout-positioner figure:first-of-type {
+    margin-bottom: 5%;
+}
+
+.contact-me figure {
+    width: 70%;
+}
+
+.contact-me .contacts {
+    width: 90%;
+} 
+    
+    .contact-me .contacts p {
+        min-width: 150px;
+        max-height: 50%;
+        margin: 4% 0 2% 0;
+        font-size: 1rem;
+    }
+    
+.contacts table {
+    width: 100%;
+}
+
+.contacts input,
+.contacts textarea {
+    width: 95%;
+    box-sizing: border-box;
+}
+
+.page-footer .layout-positioner {
+    flex-direction: column;
+    transform: translateY(10%);
+}
+
+.page-footer .footer-nav-menu {
+    margin: 2% 0 2% 0;
+    width: 90%;
+}
+
+.socials a {
+    padding: 0 15% 0 0;
+}

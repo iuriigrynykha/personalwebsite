@@ -18,15 +18,15 @@ body {
 }
 
 .page-header {
+    position: relative;
     width: 100%;
     height: 100%;
-    background: url("../img/responsive-design.png") no-repeat;
-    background-size: 100% 115%;
+    background: url("../img/responsive-design.png") no-repeat 50% 50%;
+    background-size: 100%;
 }
 
     .top-layout-positioner {
         width: 100%;
-        margin: auto;
         border-bottom: 0.1rem solid #cdcdcd;
     }
     
@@ -100,7 +100,7 @@ main {
     .skills,
     .contact-me {
         width: 100%;
-        height: 100vh;
+        height: 100%;
         margin: 0;
         padding: 0;
         background: url("../img/responsive-bglayouts.png") no-repeat 100% 100%;
@@ -127,7 +127,11 @@ main {
         justify-content: space-around;
         align-items: center;
         width: 100%;
-        height: 90%;
+        height: 100%;
+    }
+    
+    .about-me .layout-positioner {
+        padding: 5% 0 5% 0;
     }
     
     .about-me figure {
@@ -153,6 +157,7 @@ main {
         border: 0.2rem solid #B3B3B3;
         border-radius: 10px;
         background-color: rgba(227, 227, 227, 0.80);
+        text-align: justify;
     }
     
     .about-me .layout-positioner p a,
@@ -199,14 +204,62 @@ main {
         font-size: 1.1rem;
         line-height: 1.5;
         padding: 2%;
+        text-align: justify;
+    }
+    
+.portfolio {
+    width: 100%;
+    height: 50%;
+}
+
+    .portfolio .layout-positioner {
+        display: flex;
+        justify-content: space-around;
+        padding: 2% 0 2% 0;
+    }
+    
+    .portfolio .layout-positioner figure {
+        position: relative;
+        width: 40%;
+        height: 50%;
+    }
+    
+    .portfolio .layout-positioner figure::before {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: 15px;
+        left: 15px;
+        transform: rotate(-3deg);
+        width: 50%;
+        height: 50px;
+        border: 1px solid #000;
+        box-shadow: 0 0 5px 10px rgba(115, 115, 115, 0.80);
+    }
+    
+    .portfolio .layout-positioner figure::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: 15px;
+        right: 15px;
+        transform: rotate(3deg);
+        width: 50%;
+        height: 50px;
+        border: 1px solid #000;
+        box-shadow: 0 0 5px 10px rgba(115, 115, 115, 0.80);
+    }
+    
+    .portfolio .layout-positioner figure img {
+        width: 100%;
     }
     
 .contact-me {
-    height: 80vh;
     background: none;
 }
 
     .contact-me .layout-positioner {
+        margin: 5% 0 5% 0;
     }
     
     .contact-me figure {
@@ -217,39 +270,34 @@ main {
         width: 100%;     
     }
     
-    .contact-me .contacts {
-          width: 30%;
-    } 
+.contact-me .contacts {
+    width: 30%;
+} 
     
     .contact-me .contacts p {
-         min-width: 350px;
+        min-width: 350px;
         max-height: 50%;
-        margin: 0 0 2% 0;
+        margin: 4% 0 2% 0;
         font-size: 1.1rem;
-        line-height: 1.5;
-    }
-   
-  /*  .contact-me .contacts p .contact-icons {
-        display: inline-block;
-        position: relative;
-        margin-bottom: 3%;
     }
     
-    .contact-me .contacts p .contact-icons::before {
-        content: "";
-        position: absolute;
-        height: 40px;
-        width: 40px;
-        left: -50px;
-        margin-bottom: 1%;
-        border: 1px solid black;
-        background: url("../img/sprite-icons.png") no-repeat;
-        background-size: 200px 150px;
+    .contact-me .contacts p:last-of-type {
+        font-size: 0.8em;
     }
     
-    .contact-me .contacts p .contact-icons:first-child::before {
-        background-position: 20% 15%; 
-    }*/
+    .contacts table tr td:first-child {
+        text-align: center;
+        font-size: 1.5em;
+    }
+    
+    .contacts table tr td:last-child {
+        text-align: left;
+        padding-left: 3%;
+        width: 100%;
+    }
+    
+    .contacts .contact-form i {
+    }
     
     .contact-me .contacts label span,
     .contact-me .contacts p:last-child span{
@@ -257,12 +305,22 @@ main {
     }
     
     .contacts input,
-    .contacts input:valid,
     .contacts textarea {
         color: #000;
-        width: 70%;
+        width: 80%;
         padding: 5px 5px;
         margin-bottom: 5px;
+    }
+    
+    input[type="text"] + i,
+    input[type="email"] + i {
+        display: none;
+    }
+    
+    input[type="text"]:valid + i:first-of-type,
+    input[type="email"]:valid + i:last-of-type {
+        display: inline;
+        color: #00990A;
     }
     
     .contacts input:invalid {
@@ -275,5 +333,60 @@ main {
 
 
 .page-footer {
-    height: 20vh;
+    position: relative;
+    width: 100%;
+    height: 150px;
+    background-color: #363636;
 }
+
+    .page-footer .layout-positioner {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 80%;
+        margin: 0 auto;
+        transform: translateY(50%);
+    }
+    
+    .page-footer .footer-logo {
+        color: #ffffff;
+        text-align: center;
+    }
+    
+    .page-footer .footer-nav-menu {
+        width: 50%;
+    }
+    
+    .page-footer .footer-nav-menu ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+    }
+    
+    .page-footer .footer-nav-menu li {
+        display: inline-block;
+    }
+    
+    .page-footer .footer-nav-menu li a {
+        color: #cdcdcd;
+        text-decoration: none;
+    }
+    
+    .socials {
+        display: flex;
+        justify-content: space-around;
+        width: 20%;
+    }
+    
+    .socials a {
+        display: inline-block;
+        color: #fff;
+        font-size: 2em;
+    }
+    
+    .copyright {
+        position: absolute;
+        bottom: 2%;
+        right: 5%;
+        color: #cdcdcd;
+    }
