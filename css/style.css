@@ -26,6 +26,8 @@ body {
 }
 
     .top-layout-positioner {
+        position: fixed;
+        z-index: 1000;
         width: 100%;
         border-bottom: 0.1rem solid #cdcdcd;
     }
@@ -191,6 +193,15 @@ main {
         flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
+        margin: 2% 0 2% 0;
+    }
+    
+    .skills figure {
+        width: 40%;
+    }
+    
+     .skills figure img {
+        width: 100%;
     }
     
     .skills .par-section-skills {

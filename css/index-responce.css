@@ -2,6 +2,10 @@
     height: 50%;
 }
 
+    .top-layout-positioner {
+        position: static;
+    }
+
     .header-logo {
         width: 60%;
     }
@@ -42,8 +46,12 @@
 }
 
 .about-me figure {
-    width: 70%;
+    width: 90%;
     min-width: 150px;
+}
+
+.skills figure {
+    width: 90%;
 }
 
 .par-section {
@@ -99,7 +107,7 @@
 
 .contacts input,
 .contacts textarea {
-    width: 95%;
+    width: 90%;
     box-sizing: border-box;
 }
 
