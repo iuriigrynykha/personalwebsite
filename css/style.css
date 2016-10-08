@@ -27,9 +27,14 @@ body {
 
     .top-layout-positioner {
         position: fixed;
+        top: 0;
+        left: 0;
+        margin: 0 auto;
         z-index: 1000;
         width: 100%;
+        max-width: 100%;
         border-bottom: 0.1rem solid #cdcdcd;
+        box-sizing: border-box;
     }
     
     .header-logo {
