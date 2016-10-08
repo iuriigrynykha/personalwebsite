@@ -150,7 +150,7 @@ main {
     }
     
     .par-section p {
-        min-width: 350px;
+        min-width: 300px;
         max-height: 50%;
         margin: 0 0 2% 0;
         font-size: 1.1rem;
@@ -286,7 +286,7 @@ main {
 } 
     
     .contact-me .contacts p {
-        min-width: 350px;
+        min-width: 300px;
         max-height: 50%;
         margin: 4% 0 2% 0;
         font-size: 1.1rem;
@@ -393,6 +393,7 @@ main {
         display: inline-block;
         color: #fff;
         font-size: 2em;
+        margin: 0 5% 0 0;
     }
     
     .copyright {
