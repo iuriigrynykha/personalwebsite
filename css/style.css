@@ -54,7 +54,7 @@ body {
             margin: 0;
             padding: 0;
             font-size: 2em;
-            transition: all 450ms;
+            transition: all 200ms;
         }
         
         .header-logo span {
