@@ -1,21 +1,58 @@
 .page-header {
-    height: 50%;
+    height: 60%;
 }
 
     .top-layout-positioner {
-        position: static;
+        border-bottom: 0.1em solid #363636;
     }
 
     .header-logo {
         width: 60%;
+        line-height: 1;
     }
 
         .header-logo h2 {
             font-size: 1.5em;
+            transition: all 0ms;
         }
+        
+        .header-logo span {
+            transition: all 0ms;
+        }
+        
     .header-nav-menu {
         display: none;
     }
+    
+    .slicknav_menu {
+		display:block;
+		position: fixed;
+		background: none;
+		top: 0;
+		right: 10px;
+		z-index: 99999;
+		width: 50%;
+	}
+	
+	.slicknav_menu ul {
+	    position: fixed;
+	    right: 0;
+	    width: 100%;
+	    background: rgba(54, 54, 54, 0.8);
+	    text-align: center;
+	}
+	
+	.slicknav_nav {
+	    font-size: 1em;
+	}
+	
+	.slicknav_nav ul {
+	    margin: 0;
+	}
+	
+	.slicknav_btn {
+	    margin: 5px 5px 12px;
+	}
     
     .about-website-content {
         width: 90%;
@@ -29,28 +66,36 @@
         font-size: 1rem;
     }
     
-.about-me {
+    .affix-top {
+        height: 40px;
+    }
+    
+#about-me {
     background-size: 100%;
 }
 
-.about-me h2,
-.skills h2,
-.contact-me h2 {
+#about-me h2,
+#skills h2,
+#portfolio h2,
+#contact-me h2 {
     font-size: 32px;
+    padding-top: 5%;
 }
 
-.about-me .layout-positioner,
-.skills .layout-positioner,
-.contact-me .layout-positioner {
+#about-me .layout-positioner,
+#skills .layout-positioner,
+#portfolio .layout-positioner,
+#contact-me .layout-positioner {
      flex-direction: column;
+     align-items: center;
 }
 
-.about-me figure {
+#about-me figure {
     width: 90%;
     min-width: 150px;
 }
 
-.skills figure {
+#skills figure {
     width: 90%;
 }
 
@@ -65,36 +110,35 @@
     margin-bottom: 2%;
 }
 
-.skills .layout-positioner {
+#skills .layout-positioner {
     margin: 2% 0 2% 0;
 }
 
-.skills .par-section-skills {
+#skills .par-section-skills {
     width: 90%;
 }
 
-.skills .par-section-skills p {
+#skills .par-section-skills p {
     min-width: 150px;
 }
 
- .portfolio .layout-positioner figure {
-    position: relative;
+ #portfolio .layout-positioner figure {
     width: 70%;
 }
 
-.portfolio .layout-positioner figure:first-of-type {
+#portfolio .layout-positioner figure:first-of-type {
     margin-bottom: 5%;
 }
 
-.contact-me figure {
+#contact-me figure {
     width: 70%;
 }
 
-.contact-me .contacts {
+#contact-me .contacts {
     width: 90%;
 } 
     
-    .contact-me .contacts p {
+    #contact-me .contacts p {
         min-width: 150px;
         max-height: 50%;
         margin: 4% 0 2% 0;
@@ -107,7 +151,7 @@
 
 .contacts input,
 .contacts textarea {
-    width: 90%;
+    width: 95%;
     box-sizing: border-box;
 }
 

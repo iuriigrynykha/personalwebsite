@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
     <head>
         <meta charset="utf-8">
@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, height=device-height, 
         initial-scale=1.0, user-scalable=no, maximum-scale=1.0">
         <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+        <link rel="stylesheet" href="css/slicknav.css">
         <link rel="stylesheet" href="css/style.css" type="text/css">
         <link rel="stylesheet" href="css/index-responce.css" 
         media="(max-width: 768px)" type="text/css">
@@ -22,12 +23,13 @@
                         FRONT-END DEVELOPER
                     </span>
                 </div>
-                <nav class="header-nav-menu">
-                    <ul>
-                        <li><a href="#about-me">About me</a></li>
+                <nav class="header-nav-menu" id="menu">
+                      <ul>
+                        <li name="about-me"><a href="#about-me">About me</a></li>
                         <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact-me">Contact me</a></li>
-                    </ul>
+                      </ul>
                 </nav>
             </section>
             <!--Infornation about website content-->
@@ -41,7 +43,7 @@
             </section>
         </header>
         <main>
-            <section class="about-me" id="about-me">
+            <section id="about-me">
                 <h2>ABOUT ME</h2>
                 <div class="layout-positioner">
                     <figure>
@@ -71,7 +73,7 @@
                     </div>
                 </div>
             </section>
-            <section class="skills" id="skills">
+            <section id="skills">
                 <h2>SKILLS</h2>
                 <div class="layout-positioner">
                     <figure>
@@ -85,7 +87,8 @@
                         frameworks, JQuery JavaScript libraries.</p>
                     </div>
                 </div>
-                <section class="portfolio">
+            </section>
+            <section id="portfolio">
                     <h2>Portfolio</h2>
                     <div class="layout-positioner">
                         <figure>
@@ -96,8 +99,7 @@
                         </figure>
                     </div>
                 </section>
-            </section>
-            <section class="contact-me" id="contact-me">
+            <section id="contact-me">
                 <h2>CONTACT ME</h2>
                     <div class="layout-positioner">
                     <figure>
@@ -110,18 +112,13 @@
                                 <td>Address: Lviv, Ukraine</td>
                             </tr>
                             <tr>
-                                <td><i class="fa fa-mobile" aria-hidden="true"></i></td>
-                                <td>Tel: (093)-486-67-51</td>
-                            </tr>
-                            <tr>
                                 <td><i class="fa fa-envelope-o" aria-hidden="true"></i></td>
                                 <td>Email: iurii.grynykha@gmail.com</td>
                             </tr>
                         </table>
                         <p>You can fill in the form and I will answer you as soon as possible.</p>
                         <!--Contact form-->
-                        <form method="post" action="https://formspree.io/geroge.gru@gmail.com"
-                        class="contact-form">
+                        <form class="contact-form">
                             <label for="user-name-field">Full name:<span>&#42;</span></label>
                             <br>
                             <input type="text" name="user-name" id="user-name-field" 
@@ -140,7 +137,7 @@
                             <textarea name="comments" id="comments-field" cols="50"
                             rows="5"></textarea>
                             <br>
-                            <button name="submit">Sent</button>
+                            <button name="submit" id="send">Send</button>
                         </form>
                         <p>Fields with <span>&#42;</span> is required to fill in!</p>
                     </div>
@@ -162,6 +159,7 @@
                     <ul>
                         <li><a href="#about-me">About me</a></li>
                         <li><a href="#skills">Skills</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
                         <li><a href="#contact-me">Contacts</a></li>
                     </ul>
                 </nav>
@@ -187,5 +185,11 @@
                 Iurii Grynykha &#169; 2016
             </div>
         </footer>
+        <script src="https://code.jquery.com/jquery-3.1.1.js" 
+            integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" 
+            crossorigin="anonymous">
+        </script>
+        <script type="text/javascript" src="js/jquery.slicknav.min.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
     </body>
 </html>

@@ -20,6 +20,7 @@ body {
 .page-header {
     position: relative;
     width: 100%;
+    max-width: 1600px;
     height: 100%;
     background: url("../img/responsive-design.png") no-repeat 50% 50%;
     background-size: 100%;
@@ -28,18 +29,21 @@ body {
     .top-layout-positioner {
         position: fixed;
         top: 0;
-        left: 0;
+        left: 50%;
+        transform: translate(-50%);
         margin: 0 auto;
         z-index: 1000;
         width: 100%;
-        max-width: 100%;
-        border-bottom: 0.1rem solid #cdcdcd;
+        max-width: 1600px;
+        color: #ffffff;
+        background-color: rgba(54, 54, 54, 0.8);
         box-sizing: border-box;
+        transition: all 200ms;
     }
     
     .header-logo {
         display: inline-block;
-        width: 30%;
+        width: 40%;
         min-width: 200px;
         padding: 1% 0 1% 0;
         text-align: center;
@@ -50,14 +54,25 @@ body {
             margin: 0;
             padding: 0;
             font-size: 2em;
+            transition: all 450ms;
         }
+        
+        .header-logo span {
+            transition: all 200ms;
+        }
+        
+            .affix {
+                padding-top: 5px;
+                font-size: 0.6em;
+            }
     
     .header-nav-menu {
         display: inline-block;
-        width: 40%;
+        width: 45%;
         margin: 0;
         padding: 0;
-        margin-left: 25%;
+        margin-left: 10%;
+        font-family: "Palatino Linotype", sans-serif;
     }
     
         .header-nav-menu ul {
@@ -70,12 +85,16 @@ body {
         
         .header-nav-menu ul li a {
             font-size: 1.2em;
-            color: #000000;
             text-decoration: none;
+            color: #ffffff;
         }
         
         .header-nav-menu ul li a:hover {
-            border-bottom: 0.1rem solid #363636;
+            border-bottom: 0.1rem solid #ffffff;
+        }
+        
+        .slicknav_menu {
+        	display:none;
         }
         
     .about-website-content {
@@ -98,36 +117,46 @@ body {
         .about-website-content span {
             font-size: 2rem;
         }
+        
+        .affix-top {
+            background-color: rgba(54, 54, 54, 0.8);;
+            height: 50px;
+            text-transform: uppercase;
+            color: #ffffff;
+        }
 
 main {
     width: 100%;
 }
 
-    .about-me,
-    .skills,
-    .contact-me {
+    #about-me,
+    #skills,
+    #portfolio,
+    #contact-me {
         width: 100%;
         height: 100%;
         margin: 0;
         padding: 0;
         background: url("../img/responsive-bglayouts.png") no-repeat 100% 100%;
+        background-size: 50% 50%;
         border-bottom: 0.1rem solid #cdcdcd;
     }
     
-    .about-me h2,
-    .skills h2,
-    .contact-me h2 {
+    #about-me h2,
+    #skills h2,
+    #portfolio h2,
+    #contact-me h2 {
         width: 100%;
-        font-size: 48px;
+        font-size: 44px;
         margin: 0;
         border-bottom: 0.1rem solid #cdcdcd;
         text-align: center;
-        padding: 1% 0 1% 0;
+        padding: 3% 0 1% 0;
     }
     
-    .about-me .layout-positioner,
-    .skills .layout-positioner,
-    .contact-me .layout-positioner {
+    #about-me .layout-positioner,
+    #skills .layout-positioner,
+    #contact-me .layout-positioner {
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -137,16 +166,16 @@ main {
         height: 100%;
     }
     
-    .about-me .layout-positioner {
+    #about-me .layout-positioner {
         padding: 5% 0 5% 0;
     }
     
-    .about-me figure {
+    #about-me figure {
         width: 50%;
         min-width: 300px;
     }
     
-        .about-me figure img {
+        #about-me figure img {
             width: 100%;
         }
         
@@ -156,7 +185,6 @@ main {
     
     .par-section p {
         min-width: 300px;
-        max-height: 50%;
         margin: 0 0 2% 0;
         font-size: 1.1rem;
         line-height: 1.5;
@@ -165,16 +193,17 @@ main {
         border-radius: 10px;
         background-color: rgba(227, 227, 227, 0.80);
         text-align: justify;
+        
     }
     
-    .about-me .layout-positioner p a,
-    .about-me .layout-positioner p a:visited {
+    #about-me .layout-positioner p a,
+    #about-me .layout-positioner p a:visited {
         text-decoration: none;
         color: #363636;
         border-bottom: 1px dashed #363636;
     }
     
-    .about-me .download-btn button {
+    #about-me .download-btn button {
         padding: 3%;
         margin-left: 50%;
         transform: translate(-50%);
@@ -184,36 +213,36 @@ main {
         box-shadow: 0 1px 0 2px #cdcdcd;
     }
     
-    .about-me .download-btn button:hover {
+    #about-me .download-btn button:hover {
         background-image: linear-gradient(180deg, #5E5E5E 10%, #fff 30%, #fff 70%, #5E5E5E 90%);
     }
     
-.skills {
+#skills {
     background: none;
 }
 
-    .skills .layout-positioner {
-        height: 50%;
+    #skills .layout-positioner {
+        height: 70%;
         background-color: rgba(204, 204, 204, 0.2);
         flex-direction: row-reverse;
         justify-content: space-around;
         align-items: center;
-        margin: 2% 0 2% 0;
+        padding: 2% 0 2% 0;
     }
     
-    .skills figure {
+    #skills figure {
         width: 40%;
     }
     
-     .skills figure img {
+     #skills figure img {
         width: 100%;
     }
     
-    .skills .par-section-skills {
+    #skills .par-section-skills {
         width: 50%;
     }
     
-    .skills .par-section-skills p {
+    #skills .par-section-skills p {
         min-width: 350px;
         max-height: 50%;
         margin: 0 0 2% 0;
@@ -223,24 +252,26 @@ main {
         text-align: justify;
     }
     
-.portfolio {
+#portfolio {
     width: 100%;
-    height: 50%;
+    height: 100%;
+    text-transform: uppercase;
+    background: none;
 }
 
-    .portfolio .layout-positioner {
+    #portfolio .layout-positioner {
         display: flex;
         justify-content: space-around;
         padding: 2% 0 2% 0;
     }
     
-    .portfolio .layout-positioner figure {
+    #portfolio .layout-positioner figure {
         position: relative;
         width: 40%;
         height: 50%;
     }
     
-    .portfolio .layout-positioner figure::before {
+    #portfolio .layout-positioner figure::before {
         content: "";
         position: absolute;
         z-index: -1;
@@ -253,7 +284,7 @@ main {
         box-shadow: 0 0 5px 10px rgba(115, 115, 115, 0.80);
     }
     
-    .portfolio .layout-positioner figure::after {
+    #portfolio .layout-positioner figure::after {
         content: "";
         position: absolute;
         z-index: -1;
@@ -266,38 +297,39 @@ main {
         box-shadow: 0 0 5px 10px rgba(115, 115, 115, 0.80);
     }
     
-    .portfolio .layout-positioner figure img {
+    #portfolio .layout-positioner figure img {
         width: 100%;
     }
     
-.contact-me {
+#contact-me {
     background: none;
 }
 
-    .contact-me .layout-positioner {
+    #contact-me .layout-positioner {
         margin: 5% 0 5% 0;
     }
     
-    .contact-me figure {
+    #contact-me figure {
         width: 30%;
     }
     
-    .contact-me figure img {
+    #contact-me figure img {
         width: 100%;     
     }
     
-.contact-me .contacts {
+#contact-me .contacts {
     width: 30%;
+    font-family: Arial, serif;
 } 
     
-    .contact-me .contacts p {
+    #contact-me .contacts p {
         min-width: 300px;
         max-height: 50%;
         margin: 4% 0 2% 0;
         font-size: 1.1rem;
     }
     
-    .contact-me .contacts p:last-of-type {
+    #contact-me .contacts p:last-of-type {
         font-size: 0.8em;
     }
     
@@ -315,8 +347,8 @@ main {
     .contacts .contact-form i {
     }
     
-    .contact-me .contacts label span,
-    .contact-me .contacts p:last-child span{
+    #contact-me .contacts label span,
+    #contact-me .contacts p:last-child span{
         color: #f00;
     }
     
@@ -392,6 +424,7 @@ main {
         display: flex;
         justify-content: space-around;
         width: 20%;
+        margin-left: 2%;
     }
     
     .socials a {
