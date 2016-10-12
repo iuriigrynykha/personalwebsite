@@ -4,10 +4,12 @@
 
     .top-layout-positioner {
         border-bottom: 0.1em solid #363636;
+        min-height: 54px;
     }
 
     .header-logo {
         width: 40%;
+        min-width: 236px;
         line-height: 1;
         margin-left: 5px;
     }
@@ -19,6 +21,11 @@
         
         .header-logo span {
             transition: all 0ms;
+        }
+        
+        .affix {
+            font-size: 1em;
+            padding-top: 7px;
         }
         
     .header-nav-menu {
@@ -52,7 +59,7 @@
 	}
 	
 	.slicknav_btn {
-	    margin: 5px 5px 12px;
+	    margin: 5px 5px 10px;
 	}
     
     .about-website-content {
@@ -68,7 +75,7 @@
     }
     
     .affix-top {
-        height: 40px;
+        height: 54px;
     }
     
 #about-me {
