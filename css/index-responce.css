@@ -63,15 +63,15 @@
 	}
     
     .about-website-content {
-        width: 90%;
+        width: 100%;
     }
     
     .about-website-content h1 {
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     
     .about-website-content span {
-        font-size: 1rem;
+        font-size: 0.9em;
     }
     
     .affix-top {
@@ -161,6 +161,14 @@
 .contacts textarea {
     width: 95%;
     box-sizing: border-box;
+}
+
+#contact-me .contacts .contact-form .feedback {
+    width: 95%;
+}
+
+#contact-me .contacts .contact-form .warrning {
+    width: 95%;
 }
 
 .page-footer .layout-positioner {

@@ -151,7 +151,7 @@ main {
         margin: 0;
         border-bottom: 0.1rem solid #cdcdcd;
         text-align: center;
-        padding: 3% 0 1% 0;
+        padding: 4% 0 1% 0;
     }
     
     #about-me .layout-positioner,
@@ -347,6 +347,7 @@ main {
     }
     
     #contact-me .contacts label span,
+    #contact-me .contacts .warrning span,
     #contact-me .contacts p:last-child span{
         color: #f00;
     }
@@ -377,7 +378,33 @@ main {
     .contacts button {
         padding: 2px 20px;
     }
-
+    
+    #contact-me .contacts .contact-form .feedback {
+        display: none;
+        width: 30%;
+        font-size: 1em;
+        box-sizing: border-box;
+        font-weight: bold;
+        text-align: center;
+        color: #030;
+        border: 0.2em solid #030;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background: rgba(0, 209, 0, 0.2);
+    }
+    
+    #contact-me .contacts .contact-form .warrning {
+        display: none;
+        width: 30%;
+        text-align: center;
+        box-sizing: border-box;
+        font-size: 1em;
+        color: #6B0B00;
+        border: 0.2em solid #EB1A02;
+        border-radius: 5px;
+        padding: 5px 10px;
+        background: rgba(235, 26, 2, 0.2);
+    }
 
 .page-footer {
     position: relative;
@@ -417,6 +444,10 @@ main {
     .page-footer .footer-nav-menu li a {
         color: #cdcdcd;
         text-decoration: none;
+    }
+    
+    .page-footer .footer-nav-menu li a:hover {
+        text-shadow: 0 0 5px #000;
     }
     
     .socials {
