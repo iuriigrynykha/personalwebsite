@@ -46,14 +46,14 @@ $(function() {
                 $('#send').show();
             });
         });
-        $('form,').trigger("reset");
-    });
-    $('#send').click(function(event){
+        $('#send').click(function(event){
         var data = $('#user-name-field').val();
         var length = data.length;
         if(length < 1) {
             event.preventDefault();
         }
+    });
+        $('form,').trigger("reset");
     });
 });
 });
