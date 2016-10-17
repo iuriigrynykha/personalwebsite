@@ -41,16 +41,16 @@ $(function() {
         //$('#send').html(xhr.statusText);
         $('#send').hide();
         $('.warrning').show(function() {
-            $('form').submit(function() {
-                if ($.trim($("#user-name-field").val()) === "" || $.trim($("#user-email-field").val()) === "") {
-                    alert('you did not fill out one of the fields');
-                    return false;
-                }
-            });
             $('#user-name-field, #user-email-field, #comments-field').on('focus', function() {
                 $('.warrning').hide();
                 $('#send').show();
             });
+        });
+        $('.contact-form').submit(function() {
+            if ($.trim($("#user-name-field").val()) === "" || $.trim($("#user-email-field").val()) === "") {
+                alert('you did not fill out one of the fields');
+                return false;
+            }
         });
         $('form,').trigger("reset");
     });
