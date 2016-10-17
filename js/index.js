@@ -23,11 +23,17 @@ $(function() {
     });
     $('#send').click(function(e) {
         e.preventDefault();
-        if($('.required').val().length === 0) {
+        if($('#user-name-field').val().length === 0 || $('#user-email-field').val().length === 0) {
+            if ($('#user-name-field').val().length === 0) {
+                $('#user-name-field').addClass('invalid');
+            } else if ($('#user-email-field').val().length === 0) {
+                $('#user-email-field').addClass('invalid');
+            }
             $('#send').hide();
             $('.warrning').show(function() {
             $('#user-name-field, #user-email-field, #comments-field').on('focus', function() {
                 $('.warrning').hide();
+                $('#user-name-field, #user-email-field').removeClass('invalid');
                 $('#send').show();
             });
         });
@@ -44,10 +50,18 @@ $(function() {
     }).done(function() {
         //$('#send').html('Thank you!');
         $('#send').hide();
-        $('.feedback').show();
+        $('.feedback').show(function() {
+            $('#user-name-field, #user-email-field, #comments-field').on('focus', function() {
+                $('.feedback').hide();
+                $('#send').show();
+            });
+        });
+        $('#user-name-field').removeClass('invalid');
+        $('#user-email-field').removeClass('invalid');
         $('form').trigger("reset");
     });
-    }/*.fail(function(xhr, err) {
+    }
+    /*.fail(function(xhr, err) {
         //$('#send').html(xhr.statusText);
        /* $('#send').hide();
         $('.warrning').show(function() {

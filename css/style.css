@@ -63,7 +63,7 @@ body {
         
             .affix {
                 padding-top: 4px;
-                font-size: 0.7em;
+                font-size: 0.8em;
             }
     
     .header-nav-menu {
@@ -401,6 +401,10 @@ main {
         border-radius: 5px;
         padding: 5px 10px;
         background: rgba(235, 26, 2, 0.2);
+    }
+    
+    .invalid {
+        border: 0.1em solid #e74c3c;
     }
 
 .page-footer {
