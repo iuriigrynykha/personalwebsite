@@ -21,19 +21,6 @@ $(function() {
             top = $(id).offset().top;
         $('body,html').animate({scrollTop: top}, 1000);
     });
-     $('form').submit(function(){
-            var formValid = true;
-            $('#user-name-field').each(function(){
-                if ($.trim($(this).val()).length == 0){
-                    $(this).addClass('warrning');
-                    formValid = false;
-                }
-                else{
-                    $(this).removeClass('warrning');
-                }
-            });
-        return formValid;
-        });
     $('#send').click(function(e) {
         e.preventDefault();
         $.ajax({
@@ -60,6 +47,13 @@ $(function() {
             });
         });
         $('form,').trigger("reset");
+    });
+    $('#send').click(function(event){
+        var data = $('#user-name-field').val();
+        var length = data.length;
+        if(length < 1) {
+            event.preventDefault();
+        }
     });
 });
 });
