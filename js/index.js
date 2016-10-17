@@ -46,7 +46,18 @@ $(function() {
               //  $('#send').show();
            // });
        // });
-        $('#send').on('click', function() {
+       $('#send').on('click', function() {
+           if ($.trim($('#user-field-name').val()) === '' || $.trim($("#user-email-field").val()) === '') {
+                $(this).hide();
+                $('.warrning').show(function() {
+                    $('#user-name-field, #user-email-field, #comments-field').on('focus', function() {
+                        $('.warrning').hide();
+                        $('#send').show();
+                    });
+                });
+           }
+       });
+        /*$('#send').on('click', function() {
             if ($.trim($("#user-name-field").val()) === "" || $.trim($("#user-email-field").val()) === "") {
                 $(this).hide();
                 $('.warrning').show(function() {
@@ -54,11 +65,9 @@ $(function() {
                 $('.warrning').hide();
                 $('#send').show();
            });
-        
-        });
-            }
+                });
+            });*/
         $('form,').trigger("reset");
     });
 });
 });
-    
