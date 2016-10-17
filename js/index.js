@@ -23,6 +23,15 @@ $(function() {
     });
     $('#send').click(function(e) {
         e.preventDefault();
+        if($('.required').val().length === 0) {
+            $('#send').hide();
+            $('.warrning').show(function() {
+            $('#user-name-field, #user-email-field, #comments-field').on('focus', function() {
+                $('.warrning').hide();
+                $('#send').show();
+            });
+        });
+        } else {
         $.ajax({
         url: "https://formspree.io/iurii.grynykha@gmail.com", 
         method: "POST",
@@ -37,23 +46,17 @@ $(function() {
         $('#send').hide();
         $('.feedback').show();
         $('form').trigger("reset");
-    }).fail(function(xhr, err) {
+    });
+    }/*.fail(function(xhr, err) {
         //$('#send').html(xhr.statusText);
-        $('#send').hide();
+       /* $('#send').hide();
         $('.warrning').show(function() {
             $('#user-name-field, #user-email-field, #comments-field').on('focus', function() {
                 $('.warrning').hide();
                 $('#send').show();
             });
         });
-        $('#send').click(function(event){
-        var data = $('#user-name-field').val();
-        var length = data.length;
-        if(length < 1) {
-            event.preventDefault();
-        }
-    });
         $('form,').trigger("reset");
-    });
+    });*/
 });
 });
