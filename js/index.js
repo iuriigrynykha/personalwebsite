@@ -26,11 +26,13 @@ $(function() {
         if($('#user-name-field').val().length === 0 || $('#user-email-field').val().length === 0) {
             if ($('#user-name-field').val().length === 0) {
                 $('#user-name-field').addClass('invalid');
-            } else if ($('#user-email-field').val().length === 0) {
+            } else {
+                $('#user-name-field').removeClass('invalid');
+            }
+            if ($('#user-email-field').val().length === 0) {
                 $('#user-email-field').addClass('invalid');
             } else {
-            $('#user-name-field').addClass('invalid');
-            $('#user-email-field').addClass('invalid');
+                $('#user-email-field').removeClass('invalid');
             }
             $('#send').hide();
             $('.warrning').show(function() {

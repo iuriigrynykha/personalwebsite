@@ -404,7 +404,8 @@ main {
     }
     
     .invalid {
-        border: 0.1em solid #e74c3c;
+        border: 0.2em solid #e74c3c;
+        border-radius: 5px;
     }
 
 .page-footer {
