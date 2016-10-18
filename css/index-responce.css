@@ -24,7 +24,7 @@
         }
         
         .affix {
-            padding-top: 3px;
+            padding-top: 5px;
             font-size: 1em;
         }
         
@@ -87,7 +87,7 @@
 #portfolio h2,
 #contact-me h2 {
     font-size: 32px;
-    padding-top: 5%;
+    padding-top: 11%;
 }
 
 #about-me .layout-positioner,

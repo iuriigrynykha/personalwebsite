@@ -67,7 +67,10 @@ body {
             }
     
     .header-nav-menu {
+        position: absolute;
         display: inline-block;
+        top: 50%;
+        transform: translateY(-50%);
         width: 45%;
         margin: 0;
         padding: 0;
@@ -79,8 +82,6 @@ body {
             display: flex;
             justify-content: space-around;
             list-style: none;
-            margin: 0;
-            padding: 0;
         }
         
         .header-nav-menu ul li a {
