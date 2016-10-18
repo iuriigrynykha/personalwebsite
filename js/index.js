@@ -28,6 +28,9 @@ $(function() {
                 $('#user-name-field').addClass('invalid');
             } else if ($('#user-email-field').val().length === 0) {
                 $('#user-email-field').addClass('invalid');
+            } else {
+            $('#user-name-field').addClass('invalid');
+            $('#user-email-field').addClass('invalid');
             }
             $('#send').hide();
             $('.warrning').show(function() {
