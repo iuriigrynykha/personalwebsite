@@ -386,7 +386,7 @@ main {
         color: #030;
         border: 0.2em solid #030;
         border-radius: 5px;
-        padding: 5px 10px;
+        padding: 10px 5px;
         background: rgba(0, 209, 0, 0.2);
     }
     
@@ -399,8 +399,12 @@ main {
         color: #6B0B00;
         border: 0.2em solid #EB1A02;
         border-radius: 5px;
-        padding: 5px 10px;
+        padding: 10px 5px;
         background: rgba(235, 26, 2, 0.2);
+    }
+    
+    #contact-me .contacts .contact-form .warrning i {
+        margin-right: 10px;
     }
     
     .invalid {
